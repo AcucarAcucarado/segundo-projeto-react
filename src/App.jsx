@@ -99,9 +99,9 @@ function Home(temaSalvo) {
           </div>
         </div>
         <div className="col-md-6">
-          <div className=" h-100 shadow-sm border-0 bg-black text-white">
-            <div className=" p-4">
-              <h5 className=" mb-3">Dicas de Hoje</h5>
+          <div className="rounded border h-100 shadow-sm border-0 bg-black text-white">
+            <div className="card-body p-4">
+              <h5 className="card-title mb-3">Dicas de Hoje</h5>
               <p className=" ">{frases[indiceFrases]}</p>
               <Link to="/config" className="btn btn-sm btn-outline-light mt-2">
                 Mudar Tema
@@ -264,6 +264,13 @@ function Config({ temaSalvo, setTemaSalvo, setTemaPreview }) {
           onClick={() => mudarPreview("bg-success")}
         >
           Verde
+          </button>
+        <button
+          type="button"
+          className="btn btn-light btn-lg m-2"
+          onClick={() => mudarPreview("bg-light")}
+        >
+          ?
         </button>
         <button
           type="button"
@@ -325,7 +332,7 @@ export default function App() {
 
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home temaSalvo={temaSalvo} />} />
           <Route path="/perfil" element={<Perfil temaSalvo={temaSalvo} />} />
           <Route
             path="/config"
