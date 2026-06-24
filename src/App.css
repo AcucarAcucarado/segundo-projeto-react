@@ -182,3 +182,14 @@
     border-right-color: var(--border);
   }
 }
+
+  /* Cores Personalizadas */
+  .bg-petroleo {
+    background-color: #0F4C5C!important;
+    color: white !important;
+  }
+
+  .btn-petroleo {
+     background-color: #0F4C5C !important;
+    color: white !important;
+  }

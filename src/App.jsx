@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import "./App.css";
 
 function Home(temaSalvo) {
   /*Titulo Tela de Inicio*/
@@ -99,7 +100,7 @@ function Home(temaSalvo) {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="rounded border h-100 shadow-sm border-0 bg-black text-white">
+          <div className="rounded border h-100 shadow-sm border-0 bg-dark text-white">
             <div className="card-body p-4">
               <h5 className="card-title mb-3">Dicas de Hoje</h5>
               <p className=" ">{frases[indiceFrases]}</p>
@@ -216,7 +217,7 @@ function Config({ temaSalvo, setTemaSalvo, setTemaPreview }) {
   };
 
   return (
-    <div className="card-body">
+    <div className="card">
       <div className="mx-auto my-5" style={{ maxWidth: "400px" }}>
         <div className={`card-header ${temaSelecionado}`}>
           <h1 className="p-2 ">Configuração</h1>
@@ -267,10 +268,11 @@ function Config({ temaSalvo, setTemaSalvo, setTemaPreview }) {
           </button>
         <button
           type="button"
-          className="btn btn-light btn-lg m-2"
-          onClick={() => mudarPreview("bg-light")}
+          className="btn btn-petroleo btn-lg m-2"
+          style={{backgroundColor: '#0F4C5C', color: 'white', border: 'none'}}
+          onClick={() => mudarPreview(" bg-petroleo ")}
         >
-          ?
+          Azul Petróleo
         </button>
         <button
           type="button"
